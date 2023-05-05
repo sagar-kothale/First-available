@@ -1,0 +1,95 @@
+
+Apr 05, 2023 10:13:54 PM com.softcell.rest.SSLApplicationController info
+INFO: DashBoard report Service Started ....
+Apr 05, 2023 10:13:54 PM com.lentra.dashboard.report.ReportCreater info
+INFO: Report Service Started ..............
+Apr 05, 2023 10:13:55 PM com.lentra.dashboard.report.ReportCreater info
+INFO: Total number of request from 03042023 to 04042023 : 0
+Apr 05, 2023 10:13:55 PM com.lentra.dashboard.report.ReportCreater info
+INFO: Start upload file
+Apr 05, 2023 10:13:55 PM com.softcell.rest.service.impl.SFTPServiceImpl error
+SEVERE: Error upload file
+com.jcraft.jsch.JSchException: Auth fail
+        at com.jcraft.jsch.Session.connect(Session.java:519)
+        at com.softcell.rest.service.impl.SFTPServiceImpl.createChannelSftp(SFTP                                                                                                 ServiceImpl.java:72)
+        at com.softcell.rest.service.impl.SFTPServiceImpl.uploadFile(SFTPService                                                                                                 Impl.java:51)
+        at com.lentra.dashboard.report.ReportCreater.moveFilesToSFTP(ReportCreat                                                                                                 er.java:3150)
+        at com.lentra.dashboard.report.ReportCreater.submitReport(ReportCreater.                                                                                                 java:199)
+        at com.softcell.rest.SSLApplicationController.sumbitVmReportRequest(SSLA                                                                                                 pplicationController.java:144)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.                                                                                                 java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAcces                                                                                                 sorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.springframework.web.method.support.InvocableHandlerMethod.doInvok                                                                                                 e(InvocableHandlerMethod.java:205)
+        at org.springframework.web.method.support.InvocableHandlerMethod.invokeF                                                                                                 orRequest(InvocableHandlerMethod.java:133)
+        at org.springframework.web.servlet.mvc.method.annotation.ServletInvocabl                                                                                                 eHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingH                                                                                                 andlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingH                                                                                                 andlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+        at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapt                                                                                                 er.handle(AbstractHandlerMethodAdapter.java:85)
+        at org.springframework.web.servlet.DispatcherServlet.doDispatch(Dispatch                                                                                                 erServlet.java:967)
+        at org.springframework.web.servlet.DispatcherServlet.doService(Dispatche                                                                                                 rServlet.java:901)
+        at org.springframework.web.servlet.FrameworkServlet.processRequest(Frame                                                                                                 workServlet.java:970)
+        at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServ                                                                                                 let.java:872)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+        at org.springframework.web.servlet.FrameworkServlet.service(FrameworkSer                                                                                                 vlet.java:846)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Appl                                                                                                 icationFilterChain.java:305)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationF                                                                                                 ilterChain.java:210)
+        at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51                                                                                                 )
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Appl                                                                                                 icationFilterChain.java:243)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationF                                                                                                 ilterChain.java:210)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:317)
+        at org.springframework.security.web.access.intercept.FilterSecurityInter                                                                                                 ceptor.invoke(FilterSecurityInterceptor.java:127)
+        at org.springframework.security.web.access.intercept.FilterSecurityInter                                                                                                 ceptor.doFilter(FilterSecurityInterceptor.java:91)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.access.ExceptionTranslationFilter.do                                                                                                 Filter(ExceptionTranslationFilter.java:114)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.session.SessionManagementFilter.doFi                                                                                                 lter(SessionManagementFilter.java:137)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.authentication.AnonymousAuthenticati                                                                                                 onFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.servletapi.SecurityContextHolderAwar                                                                                                 eRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.savedrequest.RequestCacheAwareFilter                                                                                                 .doFilter(RequestCacheAwareFilter.java:63)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.authentication.AbstractAuthenticatio                                                                                                 nProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.authentication.logout.LogoutFilter.d                                                                                                 oFilter(LogoutFilter.java:116)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter                                                                                                 .java:96)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerR                                                                                                 equestFilter.java:107)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.header.HeaderWriterFilter.doFilterIn                                                                                                 ternal(HeaderWriterFilter.java:64)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerR                                                                                                 equestFilter.java:107)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.context.SecurityContextPersistenceFi                                                                                                 lter.doFilter(SecurityContextPersistenceFilter.java:105)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.context.request.async.WebAsyncManage                                                                                                 rIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerR                                                                                                 equestFilter.java:107)
+        at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.                                                                                                 doFilter(FilterChainProxy.java:331)
+        at org.springframework.security.web.FilterChainProxy.doFilterInternal(Fi                                                                                                 lterChainProxy.java:214)
+        at org.springframework.security.web.FilterChainProxy.doFilter(FilterChai                                                                                                 nProxy.java:177)
+        at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(D                                                                                                 elegatingFilterProxy.java:346)
+        at org.springframework.web.filter.DelegatingFilterProxy.doFilter(Delegat                                                                                                 ingFilterProxy.java:262)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Appl                                                                                                 icationFilterChain.java:243)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationF                                                                                                 ilterChain.java:210)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperV                                                                                                 alve.java:222)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextV                                                                                                 alve.java:123)
+        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(Authentica                                                                                                 torBase.java:502)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.j                                                                                                 ava:171)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.j                                                                                                 ava:100)
+        at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:                                                                                                 953)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineVal                                                                                                 ve.java:118)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.jav                                                                                                 a:408)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp                                                                                                 11Processor.java:1041)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(                                                                                                 AbstractProtocol.java:603)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoin                                                                                                 t.java:310)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.                                                                                                 java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor                                                                                                 .java:624)
+        at java.lang.Thread.run(Thread.java:750)
+
+Apr 05, 2023 10:13:55 PM com.lentra.dashboard.report.ReportCreater info
+INFO: Upload result: false
+Apr 05, 2023 10:13:55 PM com.lentra.dashboard.report.ReportCreater error
+SEVERE: Encountered issue while pushing the UCL report. Retry manually
+
